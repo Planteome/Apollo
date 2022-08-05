@@ -152,7 +152,8 @@ environments {
 }
 
 // log4j configuration
-log4j.main = {
+// Change this to logback instead
+logback.main = {
     // log errors from dependencies
     error 'org.codehaus.groovy.grails.web.servlet',        // controllers
             'org.codehaus.groovy.grails.web.pages',          // GSP

@@ -41,6 +41,7 @@ grails.project.dependency.resolution = {
     inherits("global") {
         // specify dependency exclusions here; for example, uncomment this to disable ehcache:
         // excludes 'ehcache'
+	excludes "grails-plugin-logging", "log4j", "grails-plugin-log4j", "slf4j-api", "tomcat-embed-logging-log4j"
     }
 
     log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
@@ -70,6 +71,7 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         runtime 'mysql:mysql-connector-java:5.1.29'
         runtime 'org.postgresql:postgresql:9.4.1212'
+	runtime 'ch.qos.logback:logback-core:0.9.29'
 //        runtime group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
 //        runtime group: 'org.postgresql', name: 'postgresql', version: '42.2.6'
         compile 'commons-codec:commons-codec:1.2'

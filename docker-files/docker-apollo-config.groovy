@@ -88,7 +88,7 @@ environments {
 }
 
 if (checkBooleanEnvironment("WEBAPOLLO_DEBUG",false)) {
-    log4j.main = {
+    logback.main = {
         debug "grails.app"
     }
 }
@@ -132,11 +132,14 @@ apollo {
             "name":"Remote User Authenticator",
             "className":"remoteUserAuthenticatorService",
             "active": checkBooleanEnvironment("WEBAPOLLO_REMOTE_USER_AUTH",false)
+	    //"active":true,
+	    //"params":["default_group": "users"],
         ],
         [
             "name":"Username Password Authenticator",
             "className":"usernamePasswordAuthenticatorService",
-            "active": checkBooleanEnvironment("WEBAPOLLO_USER_PASSWORD_AUTH",true)
+            //"active": checkBooleanEnvironment("WEBAPOLLO_USER_PASSWORD_AUTH",true)
+	    "active":true,
         ]
     ]
 }
